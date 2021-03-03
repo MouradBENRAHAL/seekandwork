@@ -24,9 +24,16 @@ class Entreprise
     /**
      * @var string
      *
-     * @ORM\Column(name="local", type="string", length=255, nullable=false)
+     * @ORM\Column(name="email", type="string", length=255, nullable=false)
      */
-    private $local;
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string", length=255, nullable=false)
+     */
+    private $adresse;
 
     /**
      * @var string
@@ -38,30 +45,42 @@ class Entreprise
     /**
      * @var string
      *
-     * @ORM\Column(name="type", type="string", length=255, nullable=false)
+     * @ORM\Column(name="description", type="string", length=500, nullable=false)
      */
-    private $type;
+    private $description;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=255, nullable=false)
+     * @ORM\Column(name="logo", type="string", length=255, nullable=false)
      */
-    private $description;
+    private $logo;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getLocal(): ?string
+    public function getEmail(): ?string
     {
-        return $this->local;
+        return $this->email;
     }
 
-    public function setLocal(string $local): self
+    public function setEmail(string $email): self
     {
-        $this->local = $local;
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(string $adresse): self
+    {
+        $this->adresse = $adresse;
 
         return $this;
     }
@@ -78,18 +97,6 @@ class Entreprise
         return $this;
     }
 
-    public function getType(): ?string
-    {
-        return $this->type;
-    }
-
-    public function setType(string $type): self
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
     public function getDescription(): ?string
     {
         return $this->description;
@@ -98,6 +105,18 @@ class Entreprise
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getLogo(): ?string
+    {
+        return $this->logo;
+    }
+
+    public function setLogo(string $logo): self
+    {
+        $this->logo = $logo;
 
         return $this;
     }

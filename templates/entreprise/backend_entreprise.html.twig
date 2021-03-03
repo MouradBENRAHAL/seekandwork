@@ -1,0 +1,39 @@
+{% extends 'backend/backbody.html.twig' %}
+{% block content %}
+        <h1>Listes des entreprises</h1>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Email</th>
+                <th>Description</th>
+                <th>Logo</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for stage in stages %}
+                <tr>
+                    <td>{{ entreprise.nom }}</td>
+                    <td>{{ entreprise.adresse }}</td>
+                    <td>{{ entreprise.email}}</td>
+                    <td>{{ entreprise.description}}</td>
+                    <td>{{ entreprise.logo}}</td>
+                    <td>
+                        <a href="{{ path('entreprise_edit', {'id': entreprise.id}) }}">edit</a>
+                    </td>
+                    <td>
+                        <a href="{{ path('entreprise_delete', {'id': entreprise.id}) }}">delete</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ path('stage_new') }}">Create new</a>
+    {% endblock %}

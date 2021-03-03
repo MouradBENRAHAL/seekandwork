@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Aler Template">
@@ -13,9 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
     {% block css %}
     <!-- Google Font -->
-
-
     <!-- Css Styles -->
+
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('frontend/css/elegant-icons.css') }}" type="text/css">
@@ -23,8 +21,9 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/nice-select.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('frontend/css/slicknav.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('frontend/css/slicknav.min.css') }}" type="text/css"><link rel="stylesheet" href="{{ asset('frontend/css/entreprise.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" type="text/css">
+
     {% endblock  %}
 </head>
 <body>
@@ -109,20 +108,20 @@
     <div class="hs-nav">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-lg-9 nav_width">
                     <nav class="nav-menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="#">Properties</a>
+                            <li class="active"><a href="{{ path('frontacceuil') }}">Home</a></li>
+                            <li><a href="#">Les offres</a>
                                 <ul class="dropdown">
-                                    <li><a href="./property.html">Property Grid</a></li>
-                                    <li><a href="./profile.html">Property List</a></li>
+                                    <li><a href="./property.html">Offres de stage</a></li>
+                                    <li><a href="./profile.html">Offres d'emnbauche</a></li>
                                     <li><a href="./property-details.html">Property Detail</a></li>
                                     <li><a href="./property-comparison.html">Property Comperison</a></li>
                                     <li><a href="./property-submit.html">Property Submit</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./agents.html">mourad</a></li>
+                            <li><a href={{path('entreprise_index')}}>Entreprise</a></li>
                             <li><a href="./about.html">bayrem</a></li>
                             <li><a href="./blog.html">yassine</a></li>
                             <li><a href="./contact.html">feriel</a></li>
@@ -138,9 +137,9 @@
 </header>
 <!-- Header End -->
 {% block content %}
+
 {% endblock%}
 <!-- Hero Section Begin -->
-
 <footer class="footer-section">
     <div class="container">
         <div class="row">
@@ -219,6 +218,7 @@
 <script src="{{ asset('frontend/js/jquery.richtext.min.js') }}"></script>
 <script src="{{ asset('frontend/js/image-uploader.min.js') }}"></script>
 <script src="{{ asset('frontend/js/main.js') }}"></script>
+
 
 {% endblock %}
 </body>

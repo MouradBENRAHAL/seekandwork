@@ -29,9 +29,9 @@ class Reclamation
     private $date;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="description", type="date", nullable=false)
+     * @ORM\Column(name="description", type="string", length=255, nullable=false)
      */
     private $description;
 
@@ -62,12 +62,12 @@ class Reclamation
         return $this;
     }
 
-    public function getDescription(): ?\DateTimeInterface
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function setDescription(\DateTimeInterface $description): self
+    public function setDescription(string $description): self
     {
         $this->description = $description;
 

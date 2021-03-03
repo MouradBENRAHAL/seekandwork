@@ -1,0 +1,60 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+{% block content %}
+        <section class="agent-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="breadcrumb-text">
+                            <h4>Mes Entreprises</h4>
+                            <div class="bt-option">
+                                <a href="{{ path('frontacceuil') }}">{{'Ajouter une offre de stage'|upper }}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="agent-search-form">
+                            <form action="#">
+                                <input type="text" placeholder="Cherche une entreprise">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{ path('entreprise_new') }}" class="add-btn font-weight-bold">{{'Ajouter une entreprise'}}</a>
+                    </div>
+                </div>
+
+                <div class="as-slider owl-carousel owl-loaded owl-drag">
+                    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2790px, 0px, 0px); transition: all 1.2s ease 0s; width: 5580px;">
+                            <div class="owl-item cloned" style="width: 930px;">
+                                <div class="row">
+                {% for entreprise in entreprises %}
+                                                <div class="col-lg-4 col-md-6">
+                                                    <div class="as-item">
+                                                        <div class="as-pic">
+                                                            <img src="frontend/img/agents/agent-1.jpg" alt="">
+                                                        </div>
+                                                        <div class="as-text">
+                                                            <div class="at-title">
+                                                                <h6>{{ entreprise.nom }}</h6>
+                                                            </div>
+                                                          <a href={{ path('entreprise_show', {'id': entreprise.id}) }} class="primary-btn">Voir détails</a></li>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                 {% else %}
+                    <tr>
+                        <a href="{{ path('entreprise_new') }}">Créer une entreprise</a>
+                    </tr>
+                {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+{% endblock %}
+

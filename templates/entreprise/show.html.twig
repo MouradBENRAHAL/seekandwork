@@ -1,0 +1,36 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block content %}
+    <div class="container mt-4 mb-5">
+        <h1>{{ entreprise.nom }}</h1>
+        <table class="table mt-5 mb-5">
+            <tbody>
+                <tr>
+                    <th>Adresse</th>
+                    <td>{{ entreprise.adresse }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{ entreprise.email }}</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>{{ entreprise.description }}</td>
+                </tr>
+                <tr>
+                    <th>Logo</th>
+                    <td>{{ entreprise.logo }}</td>
+                </tr>
+            </tbody>
+        </table>
+            <div>
+                    <span class="bt-action-form">
+                    <a href="{{ path('entreprise_index') }}">retourner à la lsite</a>
+                    <a href="{{ path('entreprise_edit', {'id': entreprise.id}) }}">modifier</a>
+                    </span>
+            </div>
+            <div class="mt-3">
+                    {{ include('entreprise/_delete_form.html.twig') }}
+            </div>
+    </div>
+{% endblock %}

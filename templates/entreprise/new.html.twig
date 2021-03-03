@@ -1,0 +1,16 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+
+{% block content %}
+    <div class="container mt-4 mb-5">
+        <h1>Créer une nouvelle entreprise</h1>
+        <div class="mt-4">
+            {{ include('entreprise/_form.html.twig') }}
+        </div>
+        <div class="mt-3">
+            <span class="bt-action-form">
+                    <a href="{{ path('entreprise_index') }}">back to list</a>
+            </span>
+        </div>
+    </div>
+{% endblock %}

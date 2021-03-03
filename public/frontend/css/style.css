@@ -158,7 +158,7 @@ ol {
 }
 
 .spad {
-  padding-top: 100px;
+  padding-top: 40px;
   padding-bottom: 100px;
 }
 
@@ -323,7 +323,20 @@ ol {
   text-transform: uppercase;
   display: inline-block;
 }
+a.hw-btn-connect {
+  font-size: 14px;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 14px 30px;
+  text-transform: uppercase;
+  display: inline-block;
+}
 
+.nav_width {
+  max-width: 85%;
+  flex: 0 0 80%;
+}
 .hs-nav .nav-menu ul li {
   list-style: none;
   display: inline-block;
@@ -1578,8 +1591,17 @@ ol {
 .breadcrumb-text {
   display: inline-block;
   background: #ffffff;
-  padding: 35px 40px;
 }
+
+a.add-btn {
+  background: #f2f2f2;
+  color: #00C89E;
+  display: block;
+  padding: 10px 0px;
+  text-align: center;
+  border: 1px solid;
+}
+
 .breadcrumb-text h4 {
   font-weight: 700;
   color: #111111;
@@ -4301,5 +4323,15 @@ li .richText-btn[data-command=toggleCode] {
     padding-left: 10%;
   }
 }
+
+.bt-action-form a {
+  background: #00C89E;
+  border: 2px solid #00C89E;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  padding: 0.8%;
+}
+
 
 /*# sourceMappingURL=style.css.map */

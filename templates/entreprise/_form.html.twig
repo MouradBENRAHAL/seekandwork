@@ -1,0 +1,13 @@
+ {{ form_start(form) }}
+ <div class="container">
+        <div class="font-weight-bold">
+            {{ form_row(form.nom) }}
+            {{ form_row(form.adresse)}}
+            {{ form_row(form.email) }}
+            {{ form_row(form.description)}}
+            {{ form_row(form.logo) }}
+         </div>
+        <button class="btn">{{ button_label|default('Save') }}</button>
+ </div>
+    {{ form_end(form) }}
+
