@@ -1,0 +1,22 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block content %}
+<div class="container">
+    <h1>Modifier cette Attestation</h1>
+    {{ include('attestation/_form_attestation.html.twig') }}
+    <br> <br>
+    <div class="row">
+        <a href="{{ path('attestation_index') }}">Liste des attestations</a>
+    </div>
+    <div class="row">
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+

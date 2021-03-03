@@ -11,6 +11,9 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
@@ -114,6 +117,10 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
     </include_path>
   </component>
   <component name="ProjectId" id="1p77PRNlcKSzOzm2aDBHCVSKQYh" />
@@ -124,12 +131,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/attestation" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\seekandwork\templates\attestation" />
       <recent name="C:\wamp64\www\seekandwork\public\frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -141,6 +150,10 @@
     <option name="myCommands">
       <command value="symfony make:controller" />
       <command value="s server:run" />
+      <command value="s doctrine:database:create" />
+      <command value="symfony make:migration" />
+      <command value="s make:migration" />
+      <command value="s doctrine:migrations:migrate" />
     </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -153,6 +166,13 @@
       <updated>1614522250480</updated>
       <workItem from="1614522251573" duration="2595000" />
       <workItem from="1614525231308" duration="2255000" />
+      <workItem from="1614534366199" duration="1134000" />
+      <workItem from="1614610908907" duration="3664000" />
+      <workItem from="1614615240103" duration="28947000" />
+      <workItem from="1614702645777" duration="6024000" />
+      <workItem from="1614710559821" duration="19358000" />
+      <workItem from="1614783886939" duration="22697000" />
+      <workItem from="1614808330603" duration="2558000" />
     </task>
     <servers />
   </component>
@@ -160,25 +180,62 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1865" height="267" key="GridCell.Tab.0.bottom" timestamp="1614522640211">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="348" y="87" key="#CLI_Interpreters" timestamp="1614535798286">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="348" y="87" key="#CLI_Interpreters/0.0.1536.864@0.0.1536.864" timestamp="1614535798286" />
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1614733630474">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1614733630474" />
+    <state x="558" y="173" key="FileChooserDialogImpl" timestamp="1614631885365">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="558" y="173" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1614631885365" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1614536300207">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1614536300207" />
     <state width="1865" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state width="1865" height="267" key="GridCell.Tab.0.center" timestamp="1614522640211">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1614536300191">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1614536300191" />
     <state width="1865" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state width="1865" height="267" key="GridCell.Tab.0.left" timestamp="1614522640211">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1614536300191">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1614536300191" />
     <state width="1865" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state width="1865" height="267" key="GridCell.Tab.0.right" timestamp="1614522640211">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1614536300191">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1614536300191" />
     <state width="1865" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state x="532" y="237" width="840" height="1034" key="run.anything.popup" timestamp="1614522681332">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="561" y="155" key="NewPhpClassDialog" timestamp="1614728911738">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="561" y="155" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1614728911738" />
+    <state x="277" y="77" key="SettingsEditor" timestamp="1614535834642">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1614535834642" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1614729507464">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.864@0.0.1536.864" timestamp="1614729507464" />
+    <state x="572" y="334" width="409" height="194" key="SymfonyPathDialog" timestamp="1614535812753">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="572" y="334" width="409" height="194" key="SymfonyPathDialog/0.0.1536.864@0.0.1536.864" timestamp="1614535812753" />
+    <state x="0" y="0" width="1113" height="849" key="dock-window-1" timestamp="1614622832135">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="0" width="1113" height="849" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1614622832135" />
+    <state x="426" y="197" width="672" height="860" key="run.anything.popup" timestamp="1614728420439">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="426" y="197" width="672" height="860" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1614728420439" />
     <state x="532" y="237" width="840" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614522681332" />
   </component>
 </project>

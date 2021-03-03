@@ -1,0 +1,44 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+
+{% block content %}
+<div class="container">
+    <h1>Les demandes de services</h1> <br> <br>
+    <div class="row">
+        <a href="{{ path('service_new') }}">Créer un nouveau service</a>
+    </div>
+    <div class="row">
+        <table class="table" class="center">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Rdv</th>
+                <th>Rapport</th>
+                <th>Email</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for service in services %}
+            <tr>
+                <td>{{ service.id }}</td>
+                <td>{{ service.rdv ? service.rdv|date('Y-m-d') : ''  }}</td>
+                <td>{{ service.rapport }}</td>
+                <td>{{ service.email }}</td>
+                <td>
+                    <a href="{{ path('service_edit', {'id': service.id}) }}">Modifier</a>
+                    <a href="{{ path('service_delete', {'id': service.id}) }}">Supprimer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">Aucun service n'est disponible</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</div>
+
+{% endblock %}
+

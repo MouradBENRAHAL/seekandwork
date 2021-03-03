@@ -1,0 +1,43 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Liste des réclamations</h1> <br> <br>
+            <div class="row">
+                <a href="{{ path('reclamation_new') }}">Créer une nouvelle réclamation</a>
+            </div>
+                <div class="row">
+                    <table class="table" class="center">
+                        <thead>
+                            <tr>
+                             <th>Id</th>
+                             <th>Date</th>
+                             <th>Description</th>
+                             <th>actions</th>
+                            </tr>
+                        </thead>
+                            <tbody>
+                                {% for reclamation in reclamations %}
+                                    <tr>
+                                        <td>{{ reclamation.id }}</td>
+                                        <td>{{ reclamation.date ? reclamation.date|date('Y-m-d') : '' }}</td>
+                                        <td>{{ reclamation.description ? reclamation.description}}</td>
+                                        <td>
+                                            <a href="{{ path('reclamation_edit', {'id': reclamation.id}) }}">Modifier</a>
+                                            <a href="{{ path('reclamation_delete', {'id': reclamation.id}) }}">Supprimer</a>
+                                        </td>
+
+                                    </tr>
+                                     {% else %}
+                                  <tr>
+                                        <td colspan="4">Aucune réclamation n'est disponible</td>
+                                  </tr>
+                          {% endfor %}
+                         </tbody>
+                    </table>
+                </div>
+    </div>
+
+
+{% endblock %}

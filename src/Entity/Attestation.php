@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Attestation
@@ -25,15 +26,24 @@ class Attestation
      * @var string
      *
      * @ORM\Column(name="demande", type="string", length=255, nullable=false)
+     * @Assert\NotBlank(message="votre demande est vide")
      */
     private $demande;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=255, nullable=false)
+     * @ORM\Column(name="domaine", type="string", length=255, nullable=false)
+     * @Assert\NotBlank(message="votre domaine est vide")
      */
-    private $description;
+    private $domaine;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="date", nullable=false)
+     */
+    private $date;
 
     /**
      * @var \Service
@@ -62,14 +72,26 @@ class Attestation
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getDomaine(): ?string
     {
-        return $this->description;
+        return $this->domaine;
     }
 
-    public function setDescription(string $description): self
+    public function setDomaine(string $domaine): self
     {
-        $this->description = $description;
+        $this->domaine = $domaine;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
 
         return $this;
     }

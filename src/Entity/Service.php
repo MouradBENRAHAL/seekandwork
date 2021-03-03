@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Service
@@ -22,9 +23,9 @@ class Service
     private $id;
 
     /**
-     * @var string
+     * @var \DateTime
      *
-     * @ORM\Column(name="rdv", type="string", length=255, nullable=false)
+     * @ORM\Column(name="rdv", type="date", nullable=false)
      */
     private $rdv;
 
@@ -32,34 +33,55 @@ class Service
      * @var string
      *
      * @ORM\Column(name="rapport", type="string", length=255, nullable=false)
+     * @Assert\NotBlank(message="votre rapport est vide")
      */
     private $rapport;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255, nullable=false)
+     * @Assert\NotBlank(message="votre email est vide")
+     */
+    private $email;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getRdv(): ?string
+    public function getRdv(): ?\DateTimeInterface
     {
         return $this->rdv;
     }
 
-    public function setRdv(string $rdv): self
+    public function setRdv(\DateTimeInterface $rdv): self
     {
         $this->rdv = $rdv;
 
         return $this;
     }
 
-    public function getRapport(): ?string
+    public function getRapport()
     {
         return $this->rapport;
     }
 
-    public function setRapport(string $rapport): self
+    public function setRapport($rapport): self
     {
         $this->rapport = $rapport;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
 
         return $this;
     }

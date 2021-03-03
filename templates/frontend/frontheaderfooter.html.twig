@@ -7,7 +7,7 @@
     <meta name="keywords" content="Aler, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aler | Template</title>
+    <title>Seek & Work</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('frontend/css/slicknav.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('frontend/css/reclamation.min.css') }}" type="text/css">
+
+
     {% endblock  %}
 </head>
 <body>
@@ -112,7 +115,7 @@
                 <div class="col-lg-9">
                     <nav class="nav-menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li ><a>Home</a></li>
                             <li><a href="#">Properties</a>
                                 <ul class="dropdown">
                                     <li><a href="./property.html">Property Grid</a></li>
@@ -124,10 +127,11 @@
                             </li>
                             <li><a href="./agents.html">mourad</a></li>
                             <li><a href="./about.html">bayrem</a></li>
-                            <li><a href="./blog.html">yassine</a></li>
-                            <li><a href="./contact.html">feriel</a></li>
-                            <li><a href="./contact.html">loudjein</a></li>
-                            <li><a href="./contact.html">zeinebbb</a></li>
+                            <li > <a href="{{ path('attestation_index') }}">Attestation</a> </li>
+                            <li > <a href="{{ path('reclamation_index') }}">Réclamations</a> </li>
+                            <li > <a href="{{ path('service_index') }}">Service</a> </li>
+
+
                         </ul>
                     </nav>
                 </div>
@@ -219,6 +223,14 @@
 <script src="{{ asset('frontend/js/jquery.richtext.min.js') }}"></script>
 <script src="{{ asset('frontend/js/image-uploader.min.js') }}"></script>
 <script src="{{ asset('frontend/js/main.js') }}"></script>
+    <script>
+        $('.custom-file-input').on('change', function(event) {
+            var inputFile = event.currentTarget;
+            $(inputFile).parent()
+                .find('.custom-file-label')
+                .html(inputFile.files[0].name);
+        });
+    </script>
 
 {% endblock %}
 </body>

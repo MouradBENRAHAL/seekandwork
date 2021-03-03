@@ -1,0 +1,78 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block content %}
+
+
+
+        <div class="container">
+            <h1>Liste des attestations</h1> <br> <br>
+            <div class="row">
+                <a href="{{ path('attestation_new') }}">Créer une nouvelle attestation</a>
+            </div>
+            <div class="row">
+                <table class="table" class="center">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Date</th>
+                        <th>Domaine</th>
+                        <th>Demande</th>
+                        <th>actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for attestation in attestations %}
+                        <tr>
+                            <td>{{ attestation.id }}</td>
+                            <td>{{ attestation.date ? attestation.date|date('Y-m-d') : '' }}</td>
+                            <td>{{ attestation.domaine }}</td>
+                            <td>{{ attestation.demande }}</td>
+                            <td>
+                                <a href="{{ path('attestation_edit', {'id': attestation.id}) }}">Modifier</a>
+                                <a href="{{ path('attestation_delete', {'id': attestation.id}) }}">Supprimer</a>
+                            </td>
+
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="4">Aucune attestation n'est disponible</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

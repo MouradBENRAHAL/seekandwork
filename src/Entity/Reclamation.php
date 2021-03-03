@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Reclamation
@@ -25,13 +26,15 @@ class Reclamation
      * @var \DateTime
      *
      * @ORM\Column(name="date", type="date", nullable=false)
+     *
      */
     private $date;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="description", type="date", nullable=false)
+     * @ORM\Column(name="description", type="string", length=255, nullable=false)
+     * @Assert\NotBlank(message="votre description est vide")
      */
     private $description;
 
@@ -62,12 +65,12 @@ class Reclamation
         return $this;
     }
 
-    public function getDescription(): ?\DateTimeInterface
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    public function setDescription(\DateTimeInterface $description): self
+    public function setDescription(string $description): self
     {
         $this->description = $description;
 

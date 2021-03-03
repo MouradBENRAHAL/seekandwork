@@ -1,0 +1,16 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Modifier cette réclamation</h1>
+        {{ include('reclamation/_form_rec.html.twig') }}
+        <br> <br>
+        <div class="row">
+                <a href="{{ path('reclamation_index') }}">Liste des réclamations</a>
+            </div>
+        <div class="row">
+        </div>
+    </div>
+
+
+{% endblock %}
