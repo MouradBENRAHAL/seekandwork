@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Entreprise
@@ -23,7 +25,9 @@ class Entreprise
 
     /**
      * @var string
-     *
+     * @Assert\Email(
+     *     message = "Cet email '{{ value }}' n'est pas valide."
+     * )
      * @ORM\Column(name="email", type="string", length=255, nullable=false)
      */
     private $email;

@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d85ec2b4-7a61-47e2-b5d5-d90ee8c3ce1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/frontend/css/enrtreprise.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/entreprise/backend_entreprise.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/seekandwork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/seekandwork.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/frontend/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Entreprise.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entreprise.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Reclamation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Reclamation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/backend/backbody.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/backend/backbody.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frontend/frontbody.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/frontbody.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frontend/frontheaderfooter.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/frontheaderfooter.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +134,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/frontend" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/chakroun/FINDMEPROJECTBACKOFFICE" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -182,7 +168,8 @@
       <workItem from="1614611652834" duration="23958000" />
       <workItem from="1614717833463" duration="14241000" />
       <workItem from="1614736620597" duration="3462000" />
-      <workItem from="1614773449941" duration="16407000" />
+      <workItem from="1614773449941" duration="17342000" />
+      <workItem from="1614794847212" duration="296000" />
     </task>
     <servers />
   </component>
@@ -190,10 +177,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="687" y="199" key="FileChooserDialogImpl" timestamp="1614548790900">
+    <state x="687" y="199" key="FileChooserDialogImpl" timestamp="1614794300528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="687" y="199" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1614548790900" />
+    <state x="687" y="199" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1614794300528" />
     <state width="1865" height="267" key="GridCell.Tab.0.bottom" timestamp="1614522640211">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
