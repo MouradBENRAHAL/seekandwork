@@ -1,0 +1,44 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div class="alert alert-success" role="alert">
+            <h1>Vous cherchez un Employé?</h1>
+        </div>
+
+    <table  class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Titre</th>
+                <th>Type</th>
+                <th>Id user</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for embauche in embauches %}
+            <tr>
+                <td>{{ embauche.id }}</td>
+                <td>{{ embauche.description }}</td>
+                <td>{{ embauche.titre }}</td>
+                <td>{{ embauche.type }}</td>
+                <td>{{ embauche.iduser }}</td>
+                <td>
+                    <a href="{{ path('embauche_show', {'id': embauche.id}) }}"> <button type="button" class="btn btn-warning">Show</button></a>
+                    <a href="{{ path('embauche_edit', {'id': embauche.id}) }}"> <button type="button" class="btn btn-success">Edit</button></a>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('embauche_new') }}"><button type="button" class="btn btn-success">Create New</button></a>
+    </div>
+{% endblock %}

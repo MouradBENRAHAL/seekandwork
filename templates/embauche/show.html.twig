@@ -1,0 +1,38 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block content %}
+<div class="alert alert-success" role="alert">
+    <h1>Embauche</h1>
+</div>
+    <table class="table table-success table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ embauche.id }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ embauche.description }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ embauche.titre }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ embauche.type }}</td>
+            </tr>
+            <tr>
+                <th>Iduser</th>
+                <td>{{ embauche.iduser }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('embauche_index') }}"><button type="button" class="btn btn-info">Back To list</button></a>
+
+    <a href="{{ path('embauche_edit', {'id': embauche.id}) }}"><button type="button" class="btn btn-success">Edit</button></a>
+
+
+    {{ include('embauche/_delete_form.html.twig') }}
+{% endblock %}

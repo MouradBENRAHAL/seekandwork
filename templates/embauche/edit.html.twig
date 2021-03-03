@@ -1,0 +1,13 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block content %}
+
+<div class="alert alert-success" role="alert">
+    <h1>Edit Embauche</h1>
+</div>
+    {{ include('embauche/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('embauche_index') }}"><button type="button" class="btn btn-info">Back To list</button></a>
+
+    {{ include('embauche/_delete_form.html.twig') }}
+{% endblock %}
