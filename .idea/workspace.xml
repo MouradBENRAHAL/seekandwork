@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d85ec2b4-7a61-47e2-b5d5-d90ee8c3ce1b" name="Default Changelist" comment="" />
+    <list default="true" id="d85ec2b4-7a61-47e2-b5d5-d90ee8c3ce1b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/formation/Affichef.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/formation/Afficherf.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/formation/addformation.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/formation/detailformation.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/formation/editformation.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reduction/addreduction.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reduction/detailreduction.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reduction/editreduction.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_28_02_2021_15_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/seekandwork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/seekandwork.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Formation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Formation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Reduction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Reduction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/backbody.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/backend/backbody.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/frontheaderfooter.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/frontheaderfooter.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +31,17 @@
   <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -114,6 +146,10 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1p77PRNlcKSzOzm2aDBHCVSKQYh" />
@@ -122,17 +158,22 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/frontend" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\seekandwork\templates\frontend" />
       <recent name="C:\wamp64\www\seekandwork\public\frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\seekandwork\templates\formation" />
       <recent name="C:\wamp64\www\seekandwork\templates\frontend" />
       <recent name="C:\wamp64\www\seekandwork\templates" />
     </key>
@@ -140,8 +181,25 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="symfony make:controller" />
+      <command value="s doctrine:database:create" />
+      <command value="s make:migration" />
+      <command value="s doctrine:migrations:migrate" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s make:form" />
+      <command value="s cache:clear" />
       <command value="s server:run" />
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="src" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/src" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.src" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -153,32 +211,29 @@
       <updated>1614522250480</updated>
       <workItem from="1614522251573" duration="2595000" />
       <workItem from="1614525231308" duration="2255000" />
+      <workItem from="1614534944180" duration="203000" />
+      <workItem from="1614535168067" duration="36393000" />
+      <workItem from="1614698541767" duration="22709000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state width="1865" height="267" key="GridCell.Tab.0.bottom" timestamp="1614522640211">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1865" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state width="1865" height="267" key="GridCell.Tab.0.center" timestamp="1614522640211">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1865" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state width="1865" height="267" key="GridCell.Tab.0.left" timestamp="1614522640211">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1865" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state width="1865" height="267" key="GridCell.Tab.0.right" timestamp="1614522640211">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1865" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state x="532" y="237" width="840" height="1034" key="run.anything.popup" timestamp="1614522681332">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="532" y="237" width="840" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614522681332" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

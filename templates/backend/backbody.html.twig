@@ -55,13 +55,14 @@
                                 <button class="btn btn-navbar" type="button" data-widget="navbar-search">
                                     <i class="fas fa-times"></i>
                                 </button>
+
                             </div>
                         </div>
                     </form>
                 </div>
             </li>
 
-
+        </ul>
     </nav>
     <!-- /.navbar -->
 
@@ -106,17 +107,49 @@
                         <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
-                                Dashboard
+                                formation
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{ path('add_formation') }}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Dashboard v1</p>
+                                    <p>ajouter une formation</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ path('liste_formation') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>liste des formations</p>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                               reductions
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ path('add_reduction') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>ajouter une reduction</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ path('liste_reduction') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>liste des reductions</p>
+                                </a>
+                            </li>
+
 
                         </ul>
                     </li>

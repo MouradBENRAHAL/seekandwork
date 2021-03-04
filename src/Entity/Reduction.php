@@ -35,6 +35,7 @@ class Reduction
      */
     private $calcul;
 
+
     /**
      * @var \Formation
      *

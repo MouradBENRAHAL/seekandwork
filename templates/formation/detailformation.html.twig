@@ -1,0 +1,40 @@
+{% extends './backend/backbody.html.twig' %}
+{% block content %}
+    <div class="card">
+    <div class="card-header">
+        <h3 class="card-title">LISTE DES CHAUFFEURS</h3>
+    </div>
+
+    <div class="card-body p-0">
+        <table id="formation" class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>titre</th>
+                <th>description</th>
+                <th>prix</th>
+                <th>image</th>
+
+            </tr>
+            </thead>
+            <tr>
+
+                <td>{{ f.id }}</td>
+                <td>{{ f.titre }}</td>
+                <td>{{ f.description }}</td>
+                <td>{{ f.prix }}</td>
+                <td><img class="img-fluid" src="{{ asset('images/formation/' ~ f.imageName) }}"  height="50" width="50"></td>
+
+
+            </tr>
+
+
+        </table>
+        <div align="center">
+            <a class="btn btn-block btn-info" href="{{ path('liste_formation') }}" >retour</a>
+        </div>
+    </div>
+
+
+
+{% endblock content %}

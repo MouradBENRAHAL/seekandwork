@@ -1,0 +1,64 @@
+{% extends './backend/backbody.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+    {% if formation %}
+        <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">LISTE DES Formations</h3>
+        </div>
+        <div class="card-body p-0">
+            <table id="chauffeur" class="table table-striped">
+                <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>titre</th>
+                    <th>prix</th>
+
+
+                    <th>Action</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for f in formation %}
+                    <tr>
+                        <td>{{ f.id }}</td>
+                        <td>{{ f.titre }}</td>
+                        <td>{{ f.prix }}</td>
+
+                      {#   <td>
+                            <a class="btn btn-block btn-info" href="{{ path('detail_hotel',{'idHotel':h.idHotel}) }}" > detail</a>
+
+                        </td>
+                      #}
+                        <td>
+                            <a class="btn btn-block btn-success" href="{{ path('edit_formation',{'id':f.id}) }}" > modifier</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-block btn-danger" href="{{ path('delete_formation',{'id':f.id}) }} " >supprimer </a>
+                        </td>
+
+                        </td>
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+
+    {% else %}
+        <div class="container">
+            <table>
+                <thead>
+                <th>aucune formation trouvée</th>
+                <th><a class="example_b" href="{{ path('add_formation') }}">Ajouter un formation</a></th>
+                </thead>
+            </table>
+
+        </div>
+
+    {% endif %}
+{% endblock content %}
