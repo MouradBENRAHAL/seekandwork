@@ -1,0 +1,33 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+{% block content %}
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">LES specialites disponible</h3>
+            </div>
+
+            <div class="card-body p-0">
+                <table id="chauffeur" class="table table-striped">
+                    <thead>
+                    <tr >
+
+
+
+                    </tr  >
+                    </thead>
+                    <tr {% for c in specialisation %} >
+
+                        <td> {{  c.text }}</td>
+                        <td>{{ c.getDate()|date('d-m-Y H:i:s') }}</td>
+
+                       {#
+                       <td><a class="btn btn-block btn-success" href="{{ path('list_specialisationfront',{'id':c.id}) }}" > participer </a></td>
+
+                       #}
+
+                    </tr {% endfor %} >
+
+
+                </table>
+
+            </div>
+{% endblock content %}

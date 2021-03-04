@@ -1,0 +1,39 @@
+{% extends './backend/backbody.html.twig' %}
+{% block content %}
+    <div class="card">
+    <div class="card-header">
+        <h3 class="card-title">LISTE DES specialites</h3>
+    </div>
+
+    <div class="card-body p-0">
+        <table id="chauffeur" class="table table-striped">
+            <thead>
+            <tr >
+                <th>ID</th>
+                <th>text</th>
+                <th>date</th>
+                <th>modifier</th>
+                <th>delete</th>
+            </tr  >
+            </thead>
+            <tr {% for c in specialisation %} >
+
+                <td> {{ c.id }}</td>
+                <td> {{  c.text }}</td>
+                {# <td> {{  c.date }}</td> #}
+               <td>{{ c.getDate()|date('d-m-Y H:i:s') }}</td>
+                <td> <a class ="btn btn-block btn-success" href="{{ path('edit_specialisation',{'id':c.id}) }}">modifier</a></td>
+                <td> <a class ="btn btn-block btn-danger" href="{{ path('delete_specialisation',{'id':c.id}) }}">supprimer</a></td>
+
+
+
+
+
+
+            </tr {% endfor %} >
+
+
+        </table>
+
+    </div>
+{% endblock content %}

@@ -3,12 +3,19 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Vish\UploaderBundle\Mapping\Annotation\UploadbleFile;
+use Vich\UploaderBundle\Mapping\Annotation\Uploable;
+
 
 /**
  * Event
  *
  * @ORM\Table(name="event")
  * @ORM\Entity
+ * @Vich\Uploadable
  */
 class Event
 {
@@ -41,6 +48,27 @@ class Event
      * @ORM\Column(name="image", type="string", length=255, nullable=false)
      */
     private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="event_image", fileNameProperty="image")
+     */
+    private $imageFile;
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+    public function setImageFile(?File $imageFile = null): self
+    {
+        $this->imageFile = $imageFile;
+        return $this;
+
+        /*if (null !== $imageFile) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $this->updatedAt = new \DateTimeImmutable();
+        }*/
+    }
 
     /**
      * @var string
@@ -83,7 +111,7 @@ class Event
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
 

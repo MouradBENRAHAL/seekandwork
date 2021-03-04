@@ -1,0 +1,39 @@
+{% extends './backend/backbody.html.twig' %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">LISTE DES evenements</h3>
+    </div>
+
+    <div class="card-body p-0">
+        <table id="chauffeur" class="table table-striped">
+            <thead>
+            <tr >
+                <th>ID</th>
+                <th>titre</th>
+                <th>description</th>
+                <th>image</th>
+                <th>type</th>
+                <th>modifier</th>
+                <th>delete</th>
+            </tr  >
+            </thead>
+            <tr {% for c in event %} >
+
+                <td> {{ c.id }}</td>
+                <td> {{  c.titre }}</td>
+                <td> {{  c.description }}</td>
+                <td> {{  c.image }}</td>
+                <td> {{  c.type }}</td>
+                <td><a class="btn btn-block btn-success" href="{{ path('edit_event',{'id':c.id}) }}" > modifier</a></td>
+                <td> <a class ="btn btn-block btn-danger" href="{{ path('delete_event',{'id':c.id}) }}">supprimer</a></td>
+
+
+
+            </tr {% endfor %} >
+
+
+        </table>
+
+    </div>
+    {% endblock content %}

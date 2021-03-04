@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Partitipation
  *
  * @ORM\Table(name="partitipation", indexes={@ORM\Index(name="fn_spec", columns={"idspecialisation"}), @ORM\Index(name="fn_userp", columns={"iduser"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\ParticipationRepository")
  */
 class Partitipation
 {

@@ -7,9 +7,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -114,6 +117,10 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
     </include_path>
   </component>
   <component name="ProjectId" id="1p77PRNlcKSzOzm2aDBHCVSKQYh" />
@@ -124,8 +131,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/php/php7.3.5/php.exe" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -141,6 +149,11 @@
     <option name="myCommands">
       <command value="symfony make:controller" />
       <command value="s server:run" />
+      <command value="s doctrine:database:create" />
+      <command value="s make:migration" />
+      <command value="s doctrine:migrations:generate" />
+      <command value="s doctrine:migrations:migrate" />
+      <command value="s make:form" />
     </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -153,6 +166,11 @@
       <updated>1614522250480</updated>
       <workItem from="1614522251573" duration="2595000" />
       <workItem from="1614525231308" duration="2255000" />
+      <workItem from="1614531490931" duration="1824000" />
+      <workItem from="1614533337252" duration="1628000" />
+      <workItem from="1614597734340" duration="24708000" />
+      <workItem from="1614674651745" duration="17179000" />
+      <workItem from="1614759065844" duration="33667000" />
     </task>
     <servers />
   </component>
@@ -160,25 +178,62 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1865" height="267" key="GridCell.Tab.0.bottom" timestamp="1614522640211">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="348" y="67" key="#CLI_Interpreters" timestamp="1614533777954">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="348" y="67" key="#CLI_Interpreters/0.0.1536.824@0.0.1536.824" timestamp="1614533777954" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1614779679682">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1614779679682" />
+    <state x="493" y="289" key="ComposerCompositePathDialog" timestamp="1614533832105">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="493" y="289" key="ComposerCompositePathDialog/0.0.1536.824@0.0.1536.824" timestamp="1614533832105" />
+    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1614533847386">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614533847386" />
+    <state x="531" y="281" width="490" height="260" key="FrameworkEditDialogDimensionKey" timestamp="1614533260890">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="531" y="281" width="490" height="260" key="FrameworkEditDialogDimensionKey/0.0.1536.824@0.0.1536.824" timestamp="1614533260890" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1614770553332">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614770553332" />
     <state width="1865" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state width="1865" height="267" key="GridCell.Tab.0.center" timestamp="1614522640211">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1614770553332">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614770553332" />
     <state width="1865" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state width="1865" height="267" key="GridCell.Tab.0.left" timestamp="1614522640211">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1614770553331">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614770553331" />
     <state width="1865" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state width="1865" height="267" key="GridCell.Tab.0.right" timestamp="1614522640211">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1614770553332">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614770553332" />
     <state width="1865" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state x="532" y="237" width="840" height="1034" key="run.anything.popup" timestamp="1614522681332">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1614533853848">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1614533853848" />
+    <state x="572" y="314" key="SymfonyPathDialog" timestamp="1614533849454">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="572" y="314" key="SymfonyPathDialog/0.0.1536.824@0.0.1536.824" timestamp="1614533849454" />
+    <state x="426" y="188" width="672" height="820" key="run.anything.popup" timestamp="1614818017650">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="426" y="188" width="672" height="820" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1614818017650" />
     <state x="532" y="237" width="840" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614522681332" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1614613645665">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1614613645665" />
   </component>
 </project>

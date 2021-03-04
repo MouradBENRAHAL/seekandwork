@@ -1,0 +1,43 @@
+{% extends './backend/backbody.html.twig' %}
+{% block content %}
+
+    {{ form_start(form,{attr:{'id':'form'}}) }}
+    <div class="container">
+        <div class="form-group">
+            {{ form_label(form.titre,"titre:" ) }}
+            {{ form_widget(form.titre, {attr: {class:'form-control'}}) }}
+        </div>
+
+
+
+        <div class="form-group">
+            {{ form_label(form.description,"description:" ) }}
+
+            {{ form_widget(form.description,{attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.imageFile,"image:") }}
+
+            {{ form_widget(form.imageFile,{attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.type,"type:" ) }}
+
+            {{ form_widget(form.type,{attr: {class:'form-control'}}) }}
+        </div>
+
+
+
+    </div>
+    <div class="card-footer">
+        <button type="submit" href="{{ path('add_event') }}"  class="btn btn-primary">ajouter</button>
+    </div>
+
+
+
+
+
+
+    {{ form_end(form) }}
+
+{% endblock content %}
