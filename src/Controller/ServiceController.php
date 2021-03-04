@@ -65,8 +65,11 @@ class ServiceController extends AbstractController
             $file=$service->getRapport();
             if ($file){
             $fileName=md5(uniqid()).'.'.$file->guessExtension();
+            //dd($fileName);
             $file->move($this->getParameter('uploads_directory'),$fileName);
+                //dd($fileName);
             $service->setRapport($fileName);
+            //dd($service);
             }
 
 

@@ -26,7 +26,7 @@ class Attestation
      * @var string
      *
      * @ORM\Column(name="demande", type="string", length=255, nullable=false)
-     * @Assert\NotBlank(message="votre demande est vide")
+     * @Assert\NotBlank(message="Veuillez remplir la demande")
      */
     private $demande;
 
@@ -34,7 +34,7 @@ class Attestation
      * @var string
      *
      * @ORM\Column(name="domaine", type="string", length=255, nullable=false)
-     * @Assert\NotBlank(message="votre domaine est vide")
+     * @Assert\NotBlank(message="Veuillez remplir le domaine")
      */
     private $domaine;
 

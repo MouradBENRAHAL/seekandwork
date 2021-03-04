@@ -15,6 +15,7 @@
                 <th>Rdv</th>
                 <th>Rapport</th>
                 <th>Email</th>
+               {#  <th>User</th>#}
                 <th>actions</th>
             </tr>
         </thead>
@@ -25,6 +26,8 @@
                 <td>{{ service.rdv ? service.rdv|date('Y-m-d') : ''  }}</td>
                 <td>{{ service.rapport }}</td>
                 <td>{{ service.email }}</td>
+{#  <td>{{ service.idUser }}</td>#}
+
                 <td>
                     <a href="{{ path('service_edit', {'id': service.id}) }}">Modifier</a>
                     <a href="{{ path('service_delete', {'id': service.id}) }}">Supprimer</a>

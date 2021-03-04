@@ -26,7 +26,6 @@ class Reclamation
      * @var \DateTime
      *
      * @ORM\Column(name="date", type="date", nullable=false)
-     *
      */
     private $date;
 
@@ -34,7 +33,7 @@ class Reclamation
      * @var string
      *
      * @ORM\Column(name="description", type="string", length=255, nullable=false)
-     * @Assert\NotBlank(message="votre description est vide")
+     * @Assert\NotBlank(message="Veuillez remplir ce champ")
      */
     private $description;
 

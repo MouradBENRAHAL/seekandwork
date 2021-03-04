@@ -4,11 +4,10 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-
 /**
  * Service
  *
- * @ORM\Table(name="service")
+ * @ORM\Table(name="service", indexes={@ORM\Index(name="fn_iduser", columns={"id_user"})})
  * @ORM\Entity
  */
 class Service
@@ -33,7 +32,8 @@ class Service
      * @var string
      *
      * @ORM\Column(name="rapport", type="string", length=255, nullable=false)
-     * @Assert\NotBlank(message="votre rapport est vide")
+     * @Assert\NotBlank(message="Veuillez remplir ce champ")
+     *
      */
     private $rapport;
 
@@ -41,9 +41,19 @@ class Service
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, nullable=false)
-     * @Assert\NotBlank(message="votre email est vide")
+     * @Assert\NotBlank(message="Veuillez remplir l'email")
      */
     private $email;
+
+    /**
+     * @var \User
+     *
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_user", referencedColumnName="id")
+     * })
+     */
+    private $idUser;
 
     public function getId(): ?int
     {
@@ -82,6 +92,18 @@ class Service
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    public function getIdUser(): ?User
+    {
+        return $this->idUser;
+    }
+
+    public function setIdUser(?User $idUser): self
+    {
+        $this->idUser = $idUser;
 
         return $this;
     }

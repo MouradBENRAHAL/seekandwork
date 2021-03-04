@@ -3,6 +3,8 @@
 namespace App\Form;
 
 use App\Entity\Service;
+use App\Entity\User;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -36,7 +38,11 @@ class ServiceType extends AbstractType
                     'data_class' => null,
             )
             )
-  
+            ->add( 'idUser', EntityType::class,array(
+                'class' => User::class,
+                'choice_label' => 'id',
+            )
+            )
         ;
 
 
