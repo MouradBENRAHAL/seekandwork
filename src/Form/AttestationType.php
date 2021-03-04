@@ -3,6 +3,8 @@
 namespace App\Form;
 
 use App\Entity\Attestation;
+use App\Entity\Service;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -30,6 +32,15 @@ class AttestationType extends AbstractType
                 'required' => false ,
             )
             )
+           /* ->add('idservice',EntityType::class,[
+
+                    'class' => Service::class,
+                    'Choice_label'=>'Titre',
+
+
+            ]
+
+            )*/
         ;
     }
 

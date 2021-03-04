@@ -30,6 +30,20 @@ class ReclamationController extends AbstractController
     }
 
     /**
+     * @Route("/admin", name="reclamation_index_admin", methods={"GET"})
+     */
+    public function indexRecAdmin(): Response
+    {
+        $reclamations = $this->getDoctrine()
+            ->getRepository(Reclamation::class)
+            ->findAll();
+
+        return $this->render('reclamation/afficher_rec_admin.html.twig', [
+            'reclamations' => $reclamations,
+        ]);
+    }
+
+    /**
      * @Route("/new", name="reclamation_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
@@ -87,5 +101,17 @@ class ReclamationController extends AbstractController
             $entityManager->flush();
 
             return $this->redirectToRoute('reclamation_index');
+    }
+    /**
+     * @Route("/admin/{id}", name="reclamation_delete_admin")
+     */
+    public function deleteRecAdmin($id): Response
+    {
+            $reclamation = $this->getDoctrine()->getRepository(Reclamation::class)->find($id);
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($reclamation);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('reclamation_index_admin');
     }
 }

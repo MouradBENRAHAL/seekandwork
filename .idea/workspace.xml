@@ -137,13 +137,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\seekandwork\templates\attestation" />
-      <recent name="C:\wamp64\www\seekandwork\public\frontend" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\seekandwork\templates\frontend" />
       <recent name="C:\wamp64\www\seekandwork\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\seekandwork\templates\attestation" />
+      <recent name="C:\wamp64\www\seekandwork\templates\reclamation" />
+      <recent name="C:\wamp64\www\seekandwork\templates\service" />
+      <recent name="C:\wamp64\www\seekandwork\public\frontend" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -172,7 +174,8 @@
       <workItem from="1614702645777" duration="6024000" />
       <workItem from="1614710559821" duration="19358000" />
       <workItem from="1614783886939" duration="22697000" />
-      <workItem from="1614808330603" duration="2558000" />
+      <workItem from="1614808330603" duration="3453000" />
+      <workItem from="1614812775933" duration="5136000" />
     </task>
     <servers />
   </component>
@@ -216,6 +219,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="561" y="155" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1614728911738" />
+    <state x="604" y="356" key="NewPhpFileDialog" timestamp="1614813220974">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="604" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1614813220974" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1614535834642">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

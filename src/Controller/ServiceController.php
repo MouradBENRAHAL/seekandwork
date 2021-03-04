@@ -30,6 +30,19 @@ class ServiceController extends AbstractController
             'services' => $services,
         ]);
     }
+    /**
+     * @Route("/admin", name="service_index_admin", methods={"GET"})
+     */
+    public function indexServiceAdmin(): Response
+    {
+        $services = $this->getDoctrine()
+            ->getRepository(Service::class)
+            ->findAll();
+
+        return $this->render('service/afficher_service_admin.html.twig', [
+            'services' => $services,
+        ]);
+    }
 
     /**
      * @Route("/new", name="service_new", methods={"GET","POST"})
@@ -67,6 +80,7 @@ class ServiceController extends AbstractController
     }
 
 
+
     /**
      * @Route("/{id}/edit", name="service_edit", methods={"GET","POST"})
      */
@@ -88,6 +102,7 @@ class ServiceController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/{id}", name="service_delete")
      */
@@ -99,5 +114,18 @@ class ServiceController extends AbstractController
         $entityManager->flush();
 
         return $this->redirectToRoute('service_index');
+    }
+
+    /**
+     * @Route("/admin/{id}", name="service_delete_admin")
+     */
+    public function deleteServiceAdmin($id): Response
+    {
+        $service = $this->getDoctrine()->getRepository(Service::class)->find($id);
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->remove($service);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('service_index_admin');
     }
 }

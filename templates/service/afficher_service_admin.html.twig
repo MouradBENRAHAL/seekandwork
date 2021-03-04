@@ -1,0 +1,37 @@
+{% extends 'backend/backbody.html.twig' %}
+
+
+{% block content %}
+<div class="container">
+    <h2>Les demandes de services</h2> <br> <br>
+    <div class="row">
+        <table class="table" class="center">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Rdv</th>
+                <th>Rapport</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for service in services %}
+            <tr>
+                <td>{{ service.id }}</td>
+                <td>{{ service.rdv ? service.rdv|date('Y-m-d') : ''  }}</td>
+                <td>{{ service.rapport }}</td>
+                <td>{{ service.email }}</td>
+
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">Aucun service n'est disponible</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</div>
+
+{% endblock %}
+
