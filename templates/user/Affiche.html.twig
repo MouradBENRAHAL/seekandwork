@@ -1,0 +1,42 @@
+{% extends 'backend/backbody.html.twig' %}
+{% block content %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Liste des users</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>email</th>
+        <th>username</th>
+        <th>mdp</th>
+        <th>image</th>
+        <th>role</th>
+        <th>enabled</th>
+        <th>Banner</th>
+    </tr>
+    <tr {% for u in user%}>
+        <td>{{ u.id }}</td>
+        <td>{{ u.nom }}</td>
+        <td>{{ u.prenom }}</td>
+        <td>{{ u.email }}</td>
+        <td>{{ u.username }}</td>
+        <td>{{ u.mdp }}</td>
+        <td>{{ u.image }}</td>
+        <td>{{ u.role }}</td>
+        <td>{{ u.enabled }}</td>
+        <td><a  href="{{ path('deleteU',{'id':u.id}) }}">Banner</a></td>
+    </tr{% endfor %}>
+</table>
+</body>
+</html>
+{% endblock %}

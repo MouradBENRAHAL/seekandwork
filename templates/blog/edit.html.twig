@@ -1,0 +1,31 @@
+{% extends 'backend/backbody.html.twig' %}
+{% block content %}
+
+    {{ form_start(form,{attr:{'id':'form'}}) }}
+    <div class="container">
+        <div class="form-group">
+            {{ form_label(form.titre,"Titre du blog:") }}
+
+            {{ form_widget(form.titre, {attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.type,"type:" ) }}
+
+            {{ form_widget(form.type,{attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.imageFile,"image:") }}
+
+            {{ form_widget(form.imageFile,{ 'attr': {'id': 'image'} }) }}
+        </div>
+
+    </div>
+    <div class="card-footer">
+        <button type="submit" href="{{ path('add_blog') }}" class="btn btn-primary">Submit</button>
+    </div>
+
+
+
+
+    {{ form_end(form) }}
+{% endblock content %}

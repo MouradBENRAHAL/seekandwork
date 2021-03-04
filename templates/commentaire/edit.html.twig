@@ -1,0 +1,29 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+{% block content %}
+
+    {{ form_start(form,{attr:{'id':'form'}}) }}
+    <div class="container">
+        <div class="form-group">
+            {{ form_label(form.message,"message:") }}
+
+            {{ form_widget(form.message, {attr: {class:'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.idpublication,"idpublication:" ) }}
+
+            {{ form_widget(form.idpublication,{attr: {class:'form-control'}}) }}
+        </div>
+
+
+
+    </div>
+    <div class="card-footer">
+        <button type="submit" href="{{ path('add_commentaire') }}" class="btn btn-primary">Submit</button>
+    </div>
+
+
+
+
+    {{ form_end(form) }}
+
+{% endblock content %}

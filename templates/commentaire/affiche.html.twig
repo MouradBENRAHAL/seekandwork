@@ -1,0 +1,59 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+
+{% block title %}{% endblock %}
+
+{% block content %}
+    {% if commentaire %}
+        <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Liste des commentaires</h3>
+        </div>
+        <div class="card-body p-0">
+            <table id="chauffeur" class="table table-striped">
+                <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>message</th>
+                    <th>delete</th>
+                    <th>delete</th>
+
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for c in commentaire %}
+                    <tr>
+                        <td>{{ c.id }}</td>
+                        <td>{{ c.message }}</td>
+
+
+                        <td>
+                            <a class="btn btn-block btn-info" href="{{ path('delete_commentaire',{'id':c.id}) }}" > delete</a>
+
+                        </td>
+                        <td>
+                            <a class="btn btn-block btn-success" href="{{ path('update_commentaire',{'id':c.id}) }}" > modifier</a>
+                        </td>
+
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+
+    {% else %}
+        <div class="container">
+            <table>
+                <thead>
+                <th>aucun commentaire</th>
+                <th><a class="example_b" href="{{ path('add_commentaire') }}">Ajouter un commentaire</a></th>
+                </thead>
+            </table>
+
+        </div>
+
+    {% endif %}
+{% endblock content %}

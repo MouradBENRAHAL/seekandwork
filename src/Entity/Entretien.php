@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Entretien
  *
- * @ORM\Table(name="entretien", indexes={@ORM\Index(name="fn_embauche", columns={"idembauche"}), @ORM\Index(name="fn_user", columns={"iduser"})})
+ * @ORM\Table(name="entretien", indexes={@ORM\Index(name="fn_user", columns={"iduser"}), @ORM\Index(name="fn_embauche", columns={"idembauche"})})
  * @ORM\Entity
  */
 class Entretien
@@ -36,16 +36,6 @@ class Entretien
     private $pdf;
 
     /**
-     * @var \Embauche
-     *
-     * @ORM\ManyToOne(targetEntity="Embauche")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idembauche", referencedColumnName="id")
-     * })
-     */
-    private $idembauche;
-
-    /**
      * @var \User
      *
      * @ORM\ManyToOne(targetEntity="User")
@@ -54,6 +44,16 @@ class Entretien
      * })
      */
     private $iduser;
+
+    /**
+     * @var \Embauche
+     *
+     * @ORM\ManyToOne(targetEntity="Embauche")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idembauche", referencedColumnName="id")
+     * })
+     */
+    private $idembauche;
 
     public function getId(): ?int
     {
@@ -84,18 +84,6 @@ class Entretien
         return $this;
     }
 
-    public function getIdembauche(): ?Embauche
-    {
-        return $this->idembauche;
-    }
-
-    public function setIdembauche(?Embauche $idembauche): self
-    {
-        $this->idembauche = $idembauche;
-
-        return $this;
-    }
-
     public function getIduser(): ?User
     {
         return $this->iduser;
@@ -104,6 +92,18 @@ class Entretien
     public function setIduser(?User $iduser): self
     {
         $this->iduser = $iduser;
+
+        return $this;
+    }
+
+    public function getIdembauche(): ?Embauche
+    {
+        return $this->idembauche;
+    }
+
+    public function setIdembauche(?Embauche $idembauche): self
+    {
+        $this->idembauche = $idembauche;
 
         return $this;
     }

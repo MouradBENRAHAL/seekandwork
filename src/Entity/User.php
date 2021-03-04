@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * User
  *
@@ -62,20 +63,23 @@ class User
      * @ORM\Column(name="image", type="string", length=255, nullable=false)
      */
     private $image;
-
     /**
      * @var int
      *
      * @ORM\Column(name="role", type="integer", nullable=false)
      */
     private $role;
-
     /**
      * @var int
      *
      * @ORM\Column(name="enabled", type="integer", nullable=false)
      */
     private $enabled;
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
 
     public function getId(): ?int
     {
@@ -141,18 +145,13 @@ class User
 
         return $this;
     }
-
-    public function getImage(): ?string
-    {
-        return $this->image;
-    }
-
     public function setImage(string $image): self
     {
         $this->image = $image;
 
         return $this;
     }
+
 
     public function getRole(): ?int
     {
