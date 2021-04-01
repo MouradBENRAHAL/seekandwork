@@ -1,0 +1,87 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block content %}
+
+
+
+    <div class="container">
+        <h2>Liste des attestations</h2>
+        <div class="row">
+            <table class="table" class="center">
+                <thead>
+                <tr>
+                    <th>date de délivrance</th>
+                    <th>Domaine</th>
+                    <th>Adresse email</th>
+                    <th>Rapport</th>
+                    <th>service</th>
+                    <th>Nom de l'entreprise</th>
+                    {#  <th>Id stagiaire</th> #}
+
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for attestation in attestations %}
+                    <tr>
+                        <td>{{ attestation.updatedAt ? attestation.updatedAt|date('Y-m-d') : '' }}</td>
+                        <td>{{ attestation.domaine }}</td>
+                        <td>{{ attestation.email }}</td>
+                        <td>{{ attestation.FileName }}</td>
+                        <td>{{ attestation.idservice.id }}</td>
+                        <td>{{ attestation.identreprise.nom }}</td>
+
+
+
+                        <td>
+                            <a class="btn btn-success1" href="{{ path('attestation_send', {'id': attestation.id}) }}" > Envoyer l'attestation </a>
+                        </td>
+
+
+
+
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="4">Aucune attestation n'est disponible</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

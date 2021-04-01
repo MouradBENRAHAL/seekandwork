@@ -5,31 +5,39 @@
 
 
         <div class="container">
-            <h1>Liste des attestations</h1> <br> <br>
-            <div class="row">
-                <a href="{{ path('attestation_new') }}">Créer une nouvelle attestation</a>
-            </div>
+            <h2>Liste des demandes d'attestations</h2>
             <div class="row">
                 <table class="table" class="center">
                     <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Date</th>
+                        <th>date de délivrance</th>
                         <th>Domaine</th>
-                        <th>Demande</th>
-                        <th>actions</th>
+                        <th>Adresse email</th>
+                        <th>Rapport</th>
+                        <th>service</th>
+                        <th>Nom de l'entreprise</th>
+                        {#  <th>Id stagiaire</th> #}
+
+
                     </tr>
                     </thead>
                     <tbody>
                     {% for attestation in attestations %}
                         <tr>
-                            <td>{{ attestation.id }}</td>
-                            <td>{{ attestation.date ? attestation.date|date('Y-m-d') : '' }}</td>
+                            <td>{{ attestation.updatedAt ? attestation.updatedAt|date('Y-m-d') : '' }}</td>
                             <td>{{ attestation.domaine }}</td>
-                            <td>{{ attestation.demande }}</td>
+                            <td>{{ attestation.email }}</td>
+                            <td>{{ attestation.FileName }}</td>
+                            <td>{{ attestation.idservice.id }}</td>
+                            <td>{{ attestation.identreprise.nom }}</td>
+
                             <td>
-                                <a href="{{ path('attestation_edit', {'id': attestation.id}) }}">Modifier</a>
-                                <a href="{{ path('attestation_delete', {'id': attestation.id}) }}">Supprimer</a>
+                                <a href="{{ path('attestation_edit', {'id': attestation.id}) }}">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="{{ path('attestation_delete', {'id': attestation.id}) }}">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
                             </td>
 
                         </tr>
@@ -40,6 +48,9 @@
                     {% endfor %}
                     </tbody>
                 </table>
+            </div>
+            <div class="row">
+                <td><a class="btn btn-success1" href="{{ path('attestation_new') }}" > Créer une nouvelle attestation </a></td>
             </div>
         </div>
 

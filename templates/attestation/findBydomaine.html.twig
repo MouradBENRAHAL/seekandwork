@@ -1,0 +1,86 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block content %}
+
+
+
+    <div class="container">
+        <h2>Liste des attestations</h2>
+        <div class="row">
+            <table class="table" class="center">
+                <thead>
+                <tr>
+                    <th>Remise le</th>
+                    <th>Domaine</th>
+                    <th>Demande</th>
+                    <th>service</th>
+                    <th>Nom de l'entreprise</th>
+                    <th>actions</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for attestation in attestations %}
+                    <tr>
+                        <td>{{ attestation.datepublication ? attestation.datepublication|date('Y-m-d') : '' }}</td>
+                        <td>{{ attestation.domaine }}</td>
+                        <td>{{ attestation.demande }}</td>
+                        <td>{{ attestation.idservice.id }}</td>
+                        <td>{{ attestation.identreprise.nom }}</td>
+
+                        <td>
+                            <a href="{{ path('attestation_edit', {'id': attestation.id}) }}">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a href="{{ path('attestation_delete', {'id': attestation.id}) }}">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="4">Aucune attestation n'est disponible</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <td><a class="btn btn-success1" href="{{ path('attestation_new') }}" > Créer une nouvelle attestation </a></td>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,7 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * Service
  *
@@ -32,8 +32,6 @@ class Service
      * @var string
      *
      * @ORM\Column(name="rapport", type="string", length=255, nullable=false)
-     * @Assert\NotBlank(message="Veuillez remplir ce champ")
-     *
      */
     private $rapport;
 
@@ -41,7 +39,6 @@ class Service
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, nullable=false)
-     * @Assert\NotBlank(message="Veuillez remplir l'email")
      */
     private $email;
 
@@ -72,12 +69,12 @@ class Service
         return $this;
     }
 
-    public function getRapport()
+    public function getRapport(): ?string
     {
         return $this->rapport;
     }
 
-    public function setRapport($rapport): self
+    public function setRapport(string $rapport): self
     {
         $this->rapport = $rapport;
 

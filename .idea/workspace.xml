@@ -1,7 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d85ec2b4-7a61-47e2-b5d5-d90ee8c3ce1b" name="Default Changelist" comment="" />
+    <list default="true" id="d85ec2b4-7a61-47e2-b5d5-d90ee8c3ce1b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/seekandwork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/seekandwork.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210228181451.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/css/reclamation.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/css/reclamation.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/frontend/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/frontend/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/0d218f4c22245f1f994d2f3b4d239efb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/18443f54d9cf79cc21e711c44850b0a4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/45a33ff1dc60ef56ee4be7094dd77475.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/4737c6232293625527552acc8f37ccc7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/50a53adf4ceb6958dc96fd523653f778.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/53500024de3e4b1e1a04a55342d71dc2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/585568565d25080fe753b1ecd3edafe4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/674d680d74d0b6f96bb47b4a006116bb.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/710ee5f45672de618312b1ab53232b99.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/7de4230e86c7ec366bc9748f070935f9.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/8f01b28dcdf1639a2b0547cb2ed12e36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/b172c9b3c63e3018f323808cfa2e96b4.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/b2d4b83d4a710afea32119bde35a5a1d.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/cac0209fce1cec2cade5cace9413a36a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/d324acb05fd373015ba49c181f612534.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/dc22e37125745a47551e7f9495df5607.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/fa45db3b84e1b970fe694ab36cf9c7aa.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AttestationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AttestationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ReclamationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReclamationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ServiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Attestation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Attestation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Reclamation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Reclamation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AttestationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AttestationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ReclamationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ReclamationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ServiceType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ServiceType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/attestation/afficher_attestation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attestation/afficher_attestation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/attestation/edit_attestation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attestation/edit_attestation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/attestation/new_attestation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attestation/new_attestation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/backend/backbody.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/backend/backbody.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/frontheaderfooter.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/frontheaderfooter.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reclamation/afficher_rec.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reclamation/afficher_rec.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reclamation/afficher_rec_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reclamation/afficher_rec_admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reclamation/edit_rec.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reclamation/edit_rec.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reclamation/new_rec.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reclamation/new_rec.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service/afficher_service.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/afficher_service.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service/edit_service.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/edit_service.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service/new_service.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/new_service.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,6 +172,24 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/antishov/doctrine-extensions-bundle" />
+      <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mercure-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mercure" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
+      <path value="$PROJECT_DIR$/vendor/studio-42/elfinder" />
+      <path value="$PROJECT_DIR$/vendor/helios-ag/fm-elfinder-bundle" />
+      <path value="$PROJECT_DIR$/vendor/mercuryseries/flashy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/cmen/google-charts-bundle" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
     </include_path>
   </component>
   <component name="ProjectId" id="1p77PRNlcKSzOzm2aDBHCVSKQYh" />
@@ -131,21 +200,25 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/attestation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/email" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\seekandwork\templates\frontend" />
-      <recent name="C:\wamp64\www\seekandwork\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\seekandwork\templates\email" />
+      <recent name="C:\wamp64\www\seekandwork\src\Form" />
       <recent name="C:\wamp64\www\seekandwork\templates\attestation" />
+      <recent name="C:\wamp64\www\seekandwork\public\frontend\css" />
       <recent name="C:\wamp64\www\seekandwork\templates\reclamation" />
-      <recent name="C:\wamp64\www\seekandwork\templates\service" />
-      <recent name="C:\wamp64\www\seekandwork\public\frontend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\seekandwork\templates\attestation" />
+      <recent name="C:\wamp64\www\seekandwork\public\backend\dist\img" />
+      <recent name="C:\wamp64\www\seekandwork\public\backend\dist\img\credit" />
+      <recent name="C:\wamp64\www\seekandwork\public\uploads" />
+      <recent name="C:\wamp64\www\seekandwork\public\uploads\images" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -178,7 +251,15 @@
       <workItem from="1614812775933" duration="5136000" />
       <workItem from="1614821046349" duration="786000" />
       <workItem from="1614857053854" duration="4318000" />
-      <workItem from="1614862261522" duration="2190000" />
+      <workItem from="1614862261522" duration="2277000" />
+      <workItem from="1615043493340" duration="25251000" />
+      <workItem from="1615231185379" duration="3364000" />
+      <workItem from="1615248330715" duration="2799000" />
+      <workItem from="1615308920563" duration="75483000" />
+      <workItem from="1615903906985" duration="44628000" />
+      <workItem from="1616441894255" duration="11745000" />
+      <workItem from="1616843959877" duration="20629000" />
+      <workItem from="1617209607034" duration="3628000" />
     </task>
     <servers />
   </component>
@@ -190,10 +271,18 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="348" y="87" key="#CLI_Interpreters/0.0.1536.864@0.0.1536.864" timestamp="1614535798286" />
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1614733630474">
+    <state x="520" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1616450255123">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1614733630474" />
+    <state x="520" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1616450255123" />
+    <state x="574" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1616442092451">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="574" y="148" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1616442092451" />
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616092299987">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1616092299987" />
     <state x="558" y="173" key="FileChooserDialogImpl" timestamp="1614631885365">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -218,34 +307,49 @@
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1614536300191" />
     <state width="1865" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614522640211" />
-    <state x="561" y="155" key="NewPhpClassDialog" timestamp="1614728911738">
+    <state x="561" y="155" key="NewPhpClassDialog" timestamp="1615371802460">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="561" y="155" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1614728911738" />
-    <state x="604" y="356" key="NewPhpFileDialog" timestamp="1614813220974">
+    <state x="561" y="155" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1615371802460" />
+    <state x="604" y="356" key="NewPhpFileDialog" timestamp="1615421572410">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="604" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1614813220974" />
+    <state x="604" y="356" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1615421572410" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1614535834642">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1614535834642" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1614729507464">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1615461698447">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.864@0.0.1536.864" timestamp="1614729507464" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.864@0.0.1536.864" timestamp="1615461698447" />
     <state x="572" y="334" width="409" height="194" key="SymfonyPathDialog" timestamp="1614535812753">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="572" y="334" width="409" height="194" key="SymfonyPathDialog/0.0.1536.864@0.0.1536.864" timestamp="1614535812753" />
-    <state x="0" y="0" width="1113" height="849" key="dock-window-1" timestamp="1614622832135">
+    <state x="247" y="0" width="1127" height="602" key="dock-window-1" timestamp="1615425407136">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="0" y="0" width="1113" height="849" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1614622832135" />
-    <state x="426" y="197" width="672" height="860" key="run.anything.popup" timestamp="1614868602804">
+    <state x="247" y="0" width="1127" height="602" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1615425407136" />
+    <state x="426" y="197" width="672" height="860" key="run.anything.popup" timestamp="1616977456225">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="426" y="197" width="672" height="860" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1614868602804" />
+    <state x="426" y="197" width="672" height="860" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1616977456225" />
     <state x="532" y="237" width="840" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614522681332" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1615069021330">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1615069021330" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Entity/Reclamation.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Service;
+use App\Form\ServiceModifType;
 use App\Form\ServiceType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -11,6 +12,8 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Gedmo\DoctrineExtensions;
+
 
 /**
  * @Route("/service")
@@ -52,25 +55,57 @@ class ServiceController extends AbstractController
         $service = new Service();
         $service->setRdv(new \DateTime('now'));
         $form = $this->createForm(ServiceType::class, $service);
-        $form->add('Ajouter', SubmitType::class);
+        /*,[
+            'include_published_at'=>true
+        ]);*/
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($service);
             $entityManager->flush();
 
 
-            $file=$service->getRapport();
+             /*  $file=$service->getRapport();
             if ($file){
-            $fileName=md5(uniqid()).'.'.$file->guessExtension();
+            $fileName=$this->generateUniqueFileName()'.'.$file->guessExtension();
             //dd($fileName);
             $file->move($this->getParameter('uploads_directory'),$fileName);
                 //dd($fileName);
             $service->setRapport($fileName);
             //dd($service);
             }
+             */
+        /*
+            $RapportFile = $form->get('rapport')->getData();
+
+            // this condition is needed because the 'brochure' field is not required
+            // so the PDF file must be processed only when a file is uploaded
+            if ($RapportFile) {
+                $originalFilename = pathinfo($RapportFile->getClientOriginalName(), PATHINFO_FILENAME);
+                // this is needed to safely include the file name as part of the URL
+                $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$RapportFile->guessExtension();
+
+                // Move the file to the directory where brochures are stored
+                try {
+                    $RapportFile->move(
+                        $this->getParameter('uploads_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // ... handle exception if something happens during file upload
+                }
+
+                // updates the 'brochureFilename' property to store the PDF file name
+                // instead of its contents
+                $service->setRapport($newFilename);
+            }
+        */
+            // ... persist the $product variable or any other work
+
 
 
             return $this->redirectToRoute('service_index');
@@ -89,11 +124,25 @@ class ServiceController extends AbstractController
      */
     public function edit(Request $request, Service $service): Response
     {
-        $form = $this->createForm(ServiceType::class, $service);
-        $form->add('Modifier', SubmitType::class);
+        $form = $this->createForm(ServiceModifType::class, $service);
+        /*,[
+            'include_published_at'=>true
+        ]);*/
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+
+          // /**var UploadedFile $uploadedfile */
+           /* $uploadedFile=$form['rapportNom']->getData();
+            $destination=$this->getParameter('kernel.project_dir').'/public/uploads/rapports';
+            $originalFilename= pathinfo($uploadedFile->getClientOriginalName(),PATHINFO_FILENAME);
+            $newFilename=md5($originalFilename).'-'.uniqid().'.'.$uploadedFile->guessExtension;
+            $uploadedFile->move(
+                $destination,
+                $newFilename
+            );
+            $service->setRapport($newFilename);*/
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('service_index');

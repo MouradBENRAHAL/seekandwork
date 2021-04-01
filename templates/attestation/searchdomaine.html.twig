@@ -1,0 +1,16 @@
+{% for attestation in attestations %}
+        <tr>
+            <td>{{ attestation.id }}</td>
+            <td>{{ attestation.domaine }}</td>
+            <td>{{ attestation.email }}</td>
+            <td>{{ attestation.Filename }}</td>
+
+
+
+
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="4">Aucune attestation n'est disponible</td>
+        </tr>
+{% endfor %}

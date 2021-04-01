@@ -3,11 +3,13 @@
 {% block content %}
 
 
-    <div class="container"> <br> <br>
+    <div class="container">
         <h1>Créer votre réclamation</h1>
-        <a href="{{ path('reclamation_index') }}">Liste des réclamations</a>
         <div class="row">
             {{ include('reclamation/_form_rec.html.twig') }}
+        </div>
+        <div class="row">
+            <td><a class="btn btn-success" href="{{ path('reclamation_index') }}" > Liste des réclamations </a></td>
         </div>
     </div>
 

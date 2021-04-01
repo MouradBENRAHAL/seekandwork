@@ -3,10 +3,7 @@
 
 {% block content %}
 <div class="container">
-    <h1>Les demandes de services</h1> <br> <br>
-    <div class="row">
-        <a href="{{ path('service_new') }}">Créer un nouveau service</a>
-    </div>
+    <h2>La liste de services</h2>
     <div class="row">
         <table class="table" class="center">
             <thead>
@@ -25,12 +22,17 @@
                 <td>{{ service.id }}</td>
                 <td>{{ service.rdv ? service.rdv|date('Y-m-d') : ''  }}</td>
                 <td>{{ service.rapport }}</td>
+
                 <td>{{ service.email }}</td>
 {#  <td>{{ service.idUser }}</td>#}
 
                 <td>
-                    <a href="{{ path('service_edit', {'id': service.id}) }}">Modifier</a>
-                    <a href="{{ path('service_delete', {'id': service.id}) }}">Supprimer</a>
+                    <a href="{{ path('service_edit', {'id': service.id}) }}">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="{{ path('service_delete', {'id': service.id}) }}">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
                 </td>
             </tr>
         {% else %}
@@ -40,6 +42,9 @@
         {% endfor %}
         </tbody>
     </table>
+    </div>
+    <div class="row">
+        <td><a class="btn btn-success1" href="{{ path('service_new')}}" > Créer un nouveau service </a></td>
     </div>
 </div>
 

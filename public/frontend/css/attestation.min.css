@@ -1,0 +1,14 @@
+.btn-success{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}.btn-success1{
+     font-size: 14px;
+     color: #ffffff;
+     font-weight: 700;
+     letter-spacing: 0.5px;
+     background: #00C89E;
+     padding: 14px 30px;
+     text-transform: uppercase;
+     display: inline-block;
+}

@@ -3,9 +3,13 @@
 namespace App\Form;
 
 use App\Entity\Reclamation;
+use App\Entity\Service;
+use App\Entity\User;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -16,19 +20,22 @@ class ReclamationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('date',DateType::class,array(
 
-                'required' => false ,)
-            )
-
-            ->add('description',TextareaType::class,array(
-
-                    'required' => false ,
-                    )
+            ->add('description',TextareaType::class)
 
 
+            ->add('iduser',EntityType::class,[
+                'class' => User::class,
+                'choice_label' => 'id',
+            ])
+            ->add('idservice',EntityType::class,[
+                'class' => Service::class,
+                'choice_label' => 'id',
+            ])
 
-            )
+
+
+            ->add('Ajouter', SubmitType::class);
 
         ;
     }
@@ -37,6 +44,7 @@ class ReclamationType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Reclamation::class,
+            'required' => false ,
         ]);
     }
 }

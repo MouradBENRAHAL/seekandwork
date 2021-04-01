@@ -4,10 +4,12 @@
 {% block content %}
 
 <div class="container"> <br> <br>
-    <h1>Créer votre attestation</h1>
-    <a href="{{ path('attestation_index') }}">Liste des attestations</a>
+    <h2>Demander votre attestation</h2>
     <div class="row">
         {{ include('attestation/_form_attestation.html.twig') }}
+    </div>
+    <div class="row">
+        <td><a class="btn btn-success" href="{{ path('attestation_index') }}" > Liste des demandes d'attestations </a></td>
     </div>
 </div>
 

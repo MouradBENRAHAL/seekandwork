@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Reclamation
  *
- * @ORM\Table(name="reclamation", indexes={@ORM\Index(name="fn_iduserrec", columns={"iduser"})})
+ * @ORM\Table(name="reclamation", indexes={@ORM\Index(name="fk_iduser", columns={"iduser"}), @ORM\Index(name="fn_idserive", columns={"idservice"})})
  * @ORM\Entity
  */
 class Reclamation
@@ -33,7 +33,7 @@ class Reclamation
      * @var string
      *
      * @ORM\Column(name="description", type="string", length=255, nullable=false)
-     * @Assert\NotBlank(message="Veuillez remplir ce champ")
+     * @Assert\NotBlank
      */
     private $description;
 
@@ -46,6 +46,16 @@ class Reclamation
      * })
      */
     private $iduser;
+
+    /**
+     * @var \Service
+     *
+     * @ORM\ManyToOne(targetEntity="Service")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idservice", referencedColumnName="id")
+     * })
+     */
+    private $idservice;
 
     public function getId(): ?int
     {
@@ -84,6 +94,18 @@ class Reclamation
     public function setIduser(?User $iduser): self
     {
         $this->iduser = $iduser;
+
+        return $this;
+    }
+
+    public function getIdservice(): ?Service
+    {
+        return $this->idservice;
+    }
+
+    public function setIdservice(?Service $idservice): self
+    {
+        $this->idservice = $idservice;
 
         return $this;
     }

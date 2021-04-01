@@ -2,12 +2,14 @@
 
 
 {% block content %}
-<div class="container"> <br> <br>
+<div class="container">
     <h3>Créer un nouveau service</h3>
 
     <div class="row">
         {{ include('service/_form_service.html.twig') }}
-        <a href="{{ path('service_index') }}">Liste des services</a>
+    </div>
+    <div class="row">
+            <td><a class="btn btn-success" href="{{ path('service_index')}}" > Liste des services</a></td>
     </div>
 </div>
 {% endblock %}
