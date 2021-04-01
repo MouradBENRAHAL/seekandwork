@@ -35,20 +35,6 @@ class Embauche
      */
     private $titre;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="type", type="string", length=255, nullable=false)
-     */
-    private $type;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="iduser", type="integer", nullable=false)
-     */
-    private $iduser;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -74,30 +60,6 @@ class Embauche
     public function setTitre(string $titre): self
     {
         $this->titre = $titre;
-
-        return $this;
-    }
-
-    public function getType(): ?string
-    {
-        return $this->type;
-    }
-
-    public function setType(string $type): self
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
-    public function getIduser(): ?int
-    {
-        return $this->iduser;
-    }
-
-    public function setIduser(int $iduser): self
-    {
-        $this->iduser = $iduser;
 
         return $this;
     }

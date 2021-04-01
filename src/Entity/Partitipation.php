@@ -36,16 +36,6 @@ class Partitipation
     private $email;
 
     /**
-     * @var \Specialisation
-     *
-     * @ORM\ManyToOne(targetEntity="Specialisation")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idspecialisation", referencedColumnName="id")
-     * })
-     */
-    private $idspecialisation;
-
-    /**
      * @var \User
      *
      * @ORM\ManyToOne(targetEntity="User")
@@ -54,6 +44,16 @@ class Partitipation
      * })
      */
     private $iduser;
+
+    /**
+     * @var \Specialisation
+     *
+     * @ORM\ManyToOne(targetEntity="Specialisation")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idspecialisation", referencedColumnName="id")
+     * })
+     */
+    private $idspecialisation;
 
     public function getId(): ?int
     {
@@ -84,18 +84,6 @@ class Partitipation
         return $this;
     }
 
-    public function getIdspecialisation(): ?Specialisation
-    {
-        return $this->idspecialisation;
-    }
-
-    public function setIdspecialisation(?Specialisation $idspecialisation): self
-    {
-        $this->idspecialisation = $idspecialisation;
-
-        return $this;
-    }
-
     public function getIduser(): ?User
     {
         return $this->iduser;
@@ -104,6 +92,18 @@ class Partitipation
     public function setIduser(?User $iduser): self
     {
         $this->iduser = $iduser;
+
+        return $this;
+    }
+
+    public function getIdspecialisation(): ?Specialisation
+    {
+        return $this->idspecialisation;
+    }
+
+    public function setIdspecialisation(?Specialisation $idspecialisation): self
+    {
+        $this->idspecialisation = $idspecialisation;
 
         return $this;
     }

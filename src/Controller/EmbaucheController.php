@@ -26,6 +26,18 @@ class EmbaucheController extends AbstractController
         return $this->render('embauche/index.html.twig', [
             'embauches' => $embauches,
         ]);
+    }/**
+     * @Route("/admin", name="embauche_index_admin", methods={"GET"})
+     */
+    public function indexAdmin(): Response
+    {
+        $embauches = $this->getDoctrine()
+            ->getRepository(Embauche::class)
+            ->findAll();
+
+        return $this->render('embauche/backembauche.html.twig', [
+            'embauches' => $embauches,
+        ]);
     }
 
     /**
@@ -94,4 +106,16 @@ class EmbaucheController extends AbstractController
 
         return $this->redirectToRoute('embauche_index');
     }
+    /**
+     * @Route("/delete_back/{id}", name="delete_back")
+     */
+    public function deleteback(int $id): Response
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $embauche = $entityManager->getRepository(Embauche::class)->find($id);
+        $entityManager->remove($embauche);
+        $entityManager->flush();
+        return $this->redirectToRoute('embauche_index_admin');
+    }
+
 }

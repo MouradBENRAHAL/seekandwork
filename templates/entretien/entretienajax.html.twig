@@ -1,0 +1,18 @@
+{% for entretien in entretiens %}
+    <tr>
+        <td>{{ entretien.id }}</td>
+        <td>{{ entretien.date ? entretien.date|date('Y-m-d') : '' }}</td>
+        <td>{{ entretien.cv }}</td>
+        <td>{{ entretien.title }}</td>
+        <td>
+            <a href="{{ path('entretien_show', {'id': entretien.id}) }}"><button type="button" class="btn btn-warning">Show</button></a>
+            <a href="{{ path('entretien_edit', {'id': entretien.id}) }}"><button type="button" class="btn btn-success">Edit</button></a>
+
+
+        </td>
+    </tr>
+{% else %}
+    <tr>
+        <td colspan="4">no records found</td>
+    </tr>
+{% endfor %}

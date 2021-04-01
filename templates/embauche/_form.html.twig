@@ -1,17 +1,9 @@
 <div class="container">
 {{ form_start(form) }}
-<div class="form-control">
-    {{  form_row(form.description) }}
-</div>
-<div class="form-control">
+
+ {{  form_row(form.description) }}
  {{ form_row(form.titre) }}
-</div>
-    <div class="form-control">
- {{ form_row(form.type) }}
-    </div>
-        <div class="form-control">
- {{ form_row(form.iduser) }}
-</div>
+
 </div>
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

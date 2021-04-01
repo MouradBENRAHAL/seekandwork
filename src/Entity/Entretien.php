@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Entretien
  *
  * @ORM\Table(name="entretien", indexes={@ORM\Index(name="fn_embauche", columns={"idembauche"}), @ORM\Index(name="fn_user", columns={"iduser"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\EntretienRepository")
  */
 class Entretien
 {
@@ -24,26 +24,37 @@ class Entretien
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date", type="date", nullable=false)
+     * @ORM\Column(name="Date", type="date", nullable=false)
      */
     private $date;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="pdf", type="string", length=255, nullable=false)
+     * @ORM\Column(name="CV", type="string", length=255, nullable=false)
      */
-    private $pdf;
+    private $cv;
 
     /**
-     * @var \Embauche
+     * @var string
      *
-     * @ORM\ManyToOne(targetEntity="Embauche")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idembauche", referencedColumnName="id")
-     * })
+     * @ORM\Column(name="Title", type="string", length=255, nullable=false)
      */
-    private $idembauche;
+    private $title;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="begin", type="datetime", nullable=false)
+     */
+    private $begin;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="end", type="datetime", nullable=false)
+     */
+    private $end;
 
     /**
      * @var \User
@@ -54,6 +65,16 @@ class Entretien
      * })
      */
     private $iduser;
+
+    /**
+     * @var \Embauche
+     *
+     * @ORM\ManyToOne(targetEntity="Embauche")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idembauche", referencedColumnName="id")
+     * })
+     */
+    private $idembauche;
 
     public function getId(): ?int
     {
@@ -72,26 +93,50 @@ class Entretien
         return $this;
     }
 
-    public function getPdf(): ?string
+    public function getCv(): ?string
     {
-        return $this->pdf;
+        return $this->cv;
     }
 
-    public function setPdf(string $pdf): self
+    public function setCv(string $cv): self
     {
-        $this->pdf = $pdf;
+        $this->cv = $cv;
 
         return $this;
     }
 
-    public function getIdembauche(): ?Embauche
+    public function getTitle(): ?string
     {
-        return $this->idembauche;
+        return $this->title;
     }
 
-    public function setIdembauche(?Embauche $idembauche): self
+    public function setTitle(string $title): self
     {
-        $this->idembauche = $idembauche;
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getBegin(): ?\DateTimeInterface
+    {
+        return $this->begin;
+    }
+
+    public function setBegin(\DateTimeInterface $begin): self
+    {
+        $this->begin = $begin;
+
+        return $this;
+    }
+
+    public function getEnd(): ?\DateTimeInterface
+    {
+        return $this->end;
+    }
+
+    public function setEnd(\DateTimeInterface $end): self
+    {
+        $this->end = $end;
 
         return $this;
     }
@@ -104,6 +149,18 @@ class Entretien
     public function setIduser(?User $iduser): self
     {
         $this->iduser = $iduser;
+
+        return $this;
+    }
+
+    public function getIdembauche(): ?Embauche
+    {
+        return $this->idembauche;
+    }
+
+    public function setIdembauche(?Embauche $idembauche): self
+    {
+        $this->idembauche = $idembauche;
 
         return $this;
     }

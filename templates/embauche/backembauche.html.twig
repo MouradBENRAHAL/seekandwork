@@ -1,0 +1,57 @@
+
+{% extends 'backend/backbody.html.twig' %}
+    {% block content %}
+        <section class="agent-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="breadcrumb-text titre-offre">
+                            <h4>Offres d'embauche</h4>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            <div class="card">
+                <div class="card-header">
+                 
+
+                    <style>
+                        .btn-pink-moon {
+                            background: #ec008c;  /* fallback for old browsers */
+                            background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+                            background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                            color: #fff;
+                            border: 3px solid #eee;
+                        }
+                    </style>
+
+                    <div class="card-body p-0">
+                        <table id="chauffeur" class="table table-striped">
+                            <thead>
+                            <tr >
+                                <th>ID</th>
+                                <th>titre</th>
+                                <th>description</th>
+
+                            </tr  >
+                            </thead>
+                            <tr {% for embauche in embauches %} >
+                                <td> {{embauche.id}}</td>
+                                <td> {{embauche.titre}}</td>
+                                <td>{{ embauche.description }}</td>
+
+<td> <a class="fas fa-trash-alt" href="{{ path('delete_back',{'id':embauche.id}) }}"></a></td>
+
+
+
+                            </tr {% endfor %} >
+
+
+                        </table>
+
+
+
+                    </div>
+    {% endblock %}

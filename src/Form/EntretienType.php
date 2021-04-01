@@ -2,8 +2,12 @@
 
 namespace App\Form;
 
+use App\Entity\Embauche;
 use App\Entity\Entretien;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,9 +17,25 @@ class EntretienType extends AbstractType
     {
         $builder
             ->add('date')
-            ->add('pdf')
-            ->add('idembauche')
-            ->add('iduser')
+            ->add('cv' , FileType::class ,[
+                'label'=>'Choississez une image',
+                'attr' => ['class' => 'form-control']
+            ])
+            ->add('title')
+            ->add('begin', DateTimeType::class,[
+                'date_widget' => 'single_text'
+            ])
+            ->add('end', DateTimeType::class ,[
+                'date_widget'=> 'single_text'
+            ])
+            ->add('idembauche',EntityType::class, [
+
+                 'class' => Embauche::class,
+
+                'choice_label' => 'titre',
+
+            ])
+
         ;
     }
 

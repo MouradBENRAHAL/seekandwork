@@ -14,8 +14,7 @@ class EmbaucheType extends AbstractType
         $builder
             ->add('description')
             ->add('titre')
-            ->add('type')
-            ->add('iduser')
+
         ;
     }
 

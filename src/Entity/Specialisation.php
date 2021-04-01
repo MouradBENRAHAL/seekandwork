@@ -36,16 +36,6 @@ class Specialisation
     private $date;
 
     /**
-     * @var \Event
-     *
-     * @ORM\ManyToOne(targetEntity="Event")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idevent", referencedColumnName="id")
-     * })
-     */
-    private $idevent;
-
-    /**
      * @var \Partitipation
      *
      * @ORM\ManyToOne(targetEntity="Partitipation")
@@ -54,6 +44,16 @@ class Specialisation
      * })
      */
     private $idpartitipation;
+
+    /**
+     * @var \Event
+     *
+     * @ORM\ManyToOne(targetEntity="Event")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idevent", referencedColumnName="id")
+     * })
+     */
+    private $idevent;
 
     public function getId(): ?int
     {
@@ -84,18 +84,6 @@ class Specialisation
         return $this;
     }
 
-    public function getIdevent(): ?Event
-    {
-        return $this->idevent;
-    }
-
-    public function setIdevent(?Event $idevent): self
-    {
-        $this->idevent = $idevent;
-
-        return $this;
-    }
-
     public function getIdpartitipation(): ?Partitipation
     {
         return $this->idpartitipation;
@@ -104,6 +92,18 @@ class Specialisation
     public function setIdpartitipation(?Partitipation $idpartitipation): self
     {
         $this->idpartitipation = $idpartitipation;
+
+        return $this;
+    }
+
+    public function getIdevent(): ?Event
+    {
+        return $this->idevent;
+    }
+
+    public function setIdevent(?Event $idevent): self
+    {
+        $this->idevent = $idevent;
 
         return $this;
     }

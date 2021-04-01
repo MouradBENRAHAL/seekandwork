@@ -10,7 +10,7 @@ class RedirectController extends AbstractController
 {
 
     /**
-     * @Route("/frontacceuil", name="frontacceuil")
+     * @Route("/", name="frontacceuil")
      */
     public function frontend(): Response
     {
